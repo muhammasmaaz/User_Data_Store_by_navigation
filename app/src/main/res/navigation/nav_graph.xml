@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/personalUserdataFragment">
+
+    <fragment
+        android:id="@+id/personalUserdataFragment"
+        android:name="com.example.user_data_store_by_navigation.PersonalUserdataFragment"
+        android:label="fragment_personal_userdata"
+        tools:layout="@layout/fragment_personal_userdata" >
+        <action
+            android:id="@+id/action_personalUserdataFragment_to_userEducationFragment"
+            app:destination="@id/userEducationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userEducationFragment"
+        android:name="com.example.user_data_store_by_navigation.UserEducationFragment"
+        android:label="fragment_user_education"
+        tools:layout="@layout/fragment_user_education" >
+        <action
+            android:id="@+id/action_userEducationFragment_to_userExperienceFragment"
+            app:destination="@id/userExperienceFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/userExperienceFragment"
+        android:name="com.example.user_data_store_by_navigation.UserExperienceFragment"
+        android:label="fragment_user_experience"
+        tools:layout="@layout/fragment_user_experience" />
+</navigation>
